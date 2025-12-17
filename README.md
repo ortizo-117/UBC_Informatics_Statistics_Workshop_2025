@@ -299,3 +299,162 @@ ssh -T git@github.com
 ---
 
 You are now fully set up to use **RStudio + GitHub via SSH** on Windows and macOS.
+
+
+# 12. Git Command Cheat Sheet
+
+This section lists the **most common Git commands** you’ll use in RStudio projects. All commands are run in the **Terminal (Git Bash / Bash)** from inside your project directory.
+
+---
+
+## Repository setup & status
+
+```bash
+git status
+```
+Shows which files are modified, staged, or untracked.
+
+```bash
+git log --oneline --graph --decorate
+```
+Shows a compact commit history.
+
+---
+
+## Add (stage) changes
+
+```bash
+git add file_name.R
+```
+Stages a single file.
+
+```bash
+git add .
+```
+Stages **all** changed files in the project.
+
+---
+
+## Commit changes
+
+```bash
+git commit -m "Short, clear commit message"
+```
+Creates a commit with a message describing *what* changed and *why*.
+
+Best practice:
+- Commit often
+- One logical change per commit
+
+---
+
+## Sync with GitHub
+
+```bash
+git pull
+```
+Downloads changes from GitHub and merges them into your local branch.
+
+```bash
+git push
+```
+Uploads your local commits to GitHub.
+
+---
+
+## First push (new repository)
+
+```bash
+git push -u origin main
+```
+Pushes your branch and sets the upstream so future `git push` works without arguments.
+
+---
+
+## Branching (basic)
+
+```bash
+git branch
+```
+Lists branches.
+
+```bash
+git checkout -b new-branch-name
+```
+Creates and switches to a new branch.
+
+```bash
+git checkout main
+```
+Switches back to the main branch.
+
+---
+
+## Remote repositories
+
+```bash
+git remote -v
+```
+Shows the GitHub remote URLs.
+
+```bash
+git remote set-url origin git@github.com:username/repository.git
+```
+Switches a repo from HTTPS to SSH.
+
+---
+
+## Undo common mistakes
+
+```bash
+git restore file_name.R
+```
+Discards local changes to a file (not committed).
+
+```bash
+git reset HEAD file_name.R
+```
+Unstages a file (keeps changes).
+
+```bash
+git commit --amend
+```
+Edits the last commit message or adds forgotten files.
+
+---
+
+## SSH troubleshooting
+
+```bash
+ssh-add -l
+```
+Lists SSH keys currently loaded in the agent.
+
+```bash
+ssh -T git@github.com
+```
+Tests GitHub SSH authentication.
+
+---
+
+## RStudio shortcut (recommended for beginners)
+
+Most of these commands can also be done via:
+
+- **Git tab → Stage → Commit → Push**
+
+The command line and Git tab are fully equivalent.
+
+---
+
+# 12. Final Verification Checklist
+
+- `Sys.which("git")` returns a valid path
+- `ssh -T git@github.com` succeeds
+- Git tab appears in RStudio
+- `git pull` and `git push` work without passwords
+
+---
+
+You are now fully set up to use **RStudio + GitHub via SSH** on Windows and macOS.
+
