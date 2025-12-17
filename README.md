@@ -121,7 +121,7 @@ SSH keys allow secure, password-free authentication with GitHub.
 Replace the email with your GitHub email address:
 
 ```{bash}
-ssh-keygen -t ed25519 -C "oscar.ortiz.angulo@gmail.com"
+ssh-keygen -t ed25519 -C "youremail@gmail.com"
 ```
 
 - Press **Enter** to accept the default location
