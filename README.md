@@ -2,11 +2,6 @@
 A repository for the UBC Bioinformatics &amp; Statistics Workshop – Session 6 (Dec 17th) 
 
 # Overview
-
-This **R Markdown (.Rmd)** guide walks you through connecting **RStudio** to **GitHub** using **SSH**, including prerequisites, step-by-step instructions, explanations, and common issues.
-
-> Tip: This file renders nicely to HTML (default). You can change the `output:` format above if you prefer PDF/Word.
-
 ---
 
 # 1. Prerequisites
