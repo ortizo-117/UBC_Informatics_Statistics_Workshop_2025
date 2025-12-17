@@ -456,5 +456,157 @@ The command line and Git tab are fully equivalent.
 
 ---
 
+# 13. Hands-On Tutorial: Hello World with GitHub + RStudio
+
+This section is designed as a **guided, end-to-end exercise**. By the end, you will have:
+
+- Created your own GitHub repository
+- Cloned it to your computer using SSH
+- Made changes locally
+- Committed those changes
+- Pushed them back to GitHub
+
+This mirrors a typical real-world workflow.
+
+---
+
+## Step 1: Create a Repository on GitHub
+
+1. Log in to your **GitHub account**
+2. Click **New repository**
+3. Set the following options:
+   - **Repository name:** `hello_world`
+   - **Visibility:** Public
+   - ✅ Check **Add a README file**
+4. Click **Create repository**
+
+You now have a GitHub repository with one file: `README.md`.
+
+---
+
+## Step 2: Copy the SSH Clone URL
+
+1. In your `hello_world` repository on GitHub
+2. Click **Code → SSH**
+3. Copy the URL, which should look like:
+
+```
+git@github.com:your-username/hello_world.git
+```
+
+---
+
+## Step 3: Clone the Repository in RStudio
+
+1. Open **RStudio**
+2. Go to **File → New Project → Version Control → Git**
+3. Paste the SSH URL
+4. Choose a local folder
+5. Click **Create Project**
+
+RStudio will:
+- Clone the repository
+- Create an RStudio Project
+- Open it automatically
+
+---
+
+## Step 4: Explore the Project Structure
+
+In the **Files** pane, you should see:
+
+- `hello_world.Rproj`
+- `README.md`
+- A hidden `.git/` directory (managed by Git)
+
+Open `README.md` to view its contents.
+
+---
+
+## Step 5: Edit the README File
+
+1. Open `README.md` in RStudio
+2. Replace its contents with something like:
+
+```markdown
+# Hello World
+
+This is my first GitHub repository connected to RStudio.
+
+This change was made locally and pushed to GitHub.
+```
+
+3. Save the file
+
+---
+
+## Step 6: Check Git Status
+
+Open the **Git** tab in RStudio.
+
+You should see:
+- `README.md` listed as **modified**
+
+This means Git has detected your change.
+
+---
+
+## Step 7: Commit the Change
+
+Using the **Git tab**:
+
+1. Check the box next to `README.md`
+2. Click **Commit**
+3. Enter a commit message, for example:
+
+```
+Update README with hello world message
+```
+
+4. Click **Commit**
+
+A commit is a snapshot of your project at this point in time.
+
+---
+
+## Step 8: Push to GitHub (main branch)
+
+Still in the Git pane:
+
+1. Click **Push**
+
+Because SSH is set up correctly:
+- No password is required
+- The commit is sent to GitHub
+
+---
+
+## Step 9: Verify on GitHub
+
+1. Return to your repository on GitHub in a browser
+2. Refresh the page
+3. Confirm that the README now shows your updated text
+
+Congratulations 🎉 — you have completed a full Git workflow.
+
+---
+
+## Key Concepts Reinforced by This Exercise
+
+- Git tracks **local changes**
+- Commits are **local** until pushed
+- GitHub is a **remote backup and collaboration platform**
+- SSH handles authentication silently
+- RStudio integrates Git into your daily workflow
+
+---
+
+## Common Issues During the Tutorial
+
+- **Push fails:** check that your remote uses SSH (`git remote -v`)
+- **No Git tab:** ensure you are inside an RStudio Project
+- **Authentication errors:** re-test with `ssh -T git@github.com`
+
+
 You are now fully set up to use **RStudio + GitHub via SSH** on Windows and macOS.
 
